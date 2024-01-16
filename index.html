@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Documents App</title>
+</head>
+<body>
+    <div class="container">
+        <section class="top animated" id="topBar">
+            <p>Our new <span class="link">Terms of Service</span> and <br><span class="link">Privacy Statement</span> are in effect</p>
+            <i id='myIcon' class="fa fa-times fa-2x" aria-hidden="true"></i>
+        </section>
+        <section class="bottom">
+            <div class="doc">
+                <h3>Documents</h3>
+                <div class="add blue">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <input type="file" id="add" class="hidden">
+                    <label for="add" class="custom-file">
+                        <span class="icon"></span>
+                        <span class="text">Add New</span>
+                    </label>
+                </div>
+            </div>
+            <div class="search blue">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" id="search" oninput='searchList()' placeholder="Search documents">
+            </div>
+            <div class="list">
+                <ul id="itemList">
+                    <li>
+                        <img src="img/icons8-figma-48.png" alt="">
+                        <p>Project draft</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-word-48.png" alt="">
+                        <p>Report copy</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-microsoft-powerpoint-48.png" alt="">
+                        <p>Seminar brief</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-adobe-xd-48.png" alt="">
+                        <p>Pixel wire-frames</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-photoshop-48.png" alt="">
+                        <p>Visual looks</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-html5-48.png" alt="">
+                        <p>Code shop</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-css3-48.png" alt="">
+                        <p>Style god</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-javascript-48.png" alt="">
+                        <p>Interactive solutions</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-git-48.png" alt="">
+                        <p>Version control</p>
+                    </li>
+                    <li>
+                        <img src="img/icons8-node-js-48.png" alt="">
+                        <p>Backend server</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

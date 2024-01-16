@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e2ee;
+}
+
+/* Utilities */
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+.blue {
+    border-radius: 34px;
+    border: solid 3px #4e8dbc;
+    color: #4e8dbc;
+    padding: .7rem;
+}
+
+/* Hiding the top bar using js */
+.hidden {
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    gap: 1rem;
+}
+
+.link {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+section {
+    border-radius: .3rem;
+}
+
+/* TOP SECTION */
+.top {
+    background-color: #4e8dbc;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    color: #fff;
+    animation: slideFromTop 1s ease;
+}
+
+/* ANIMATION */
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* BOTTOM SECTION */
+.bottom {
+    background-color: #fff;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    font-size: 1.3rem;
+    max-height: 35rem;
+    animation: slideFromLeft 1s ease;
+}
+
+.doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.doc .add {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.custom-file {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    overflow: auto;
+    max-height: 30rem;
+    /* FIREFOX */
+    scrollbar-width: thin;
+    scrollbar-color: #4e8dbc #e2e2ee;
+    /* EDGE AND IE */
+    -ms-overflow-style: none;   
+}
+
+/* STYLING THE SCROLLBAR */
+/* CHROME, SAFARI */
+.list::-webkit-scrollbar {
+    width:.4rem;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #4e8dbc;
+    border-radius: .4rem;
+}
+
+.list::-webkit-scrollbar-track {
+    background-color: #e2e2ee;
+}
+
+/* EDGE AND IE */
+.list::-ms-scrollbar-thumb {
+    background-color: #4e8dbc;
+}
+
+.list::-ms-scrollbar-track {
+    background-color: #e2e2ee;
+}
+
+
+.list ul li{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 1rem auto;
+    color: black;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+}
+
+.list ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #4e8dbc;
+    transform: translateX(-100%);
+    transition: .3s ease-out; 
+}
+
+.list ul li:nth-child(even):before {
+    transform: translateX(100%);
+}
+
+.list ul li:hover {
+    color: #fff;
+    z-index: 2;
+}
+
+.list ul li:hover:before {
+    transform: translateX(0);
+}

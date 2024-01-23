@@ -216,16 +216,18 @@ section {
     .container {
         width: 100%;
         padding: 1rem;
+        gap: .5rem;
     }
 
     .bottom, .top {
         font-size: .8rem;
         padding-left: .8rem;
         padding-right: .8rem;
+        gap: .5rem;
     }
 
-    li {
-        gap: .7rem;
+    .list ul li {
+        margin: .5rem auto;
     }
 
     .doc {

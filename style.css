@@ -227,7 +227,7 @@ section {
     }
 
     .list ul li {
-        margin: .5rem auto;
+        margin: 0 auto;
     }
 
     .doc {

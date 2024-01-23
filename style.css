@@ -110,7 +110,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 4rem;
 }
 
 .doc .add {
@@ -209,4 +209,26 @@ section {
 
 .list ul li:hover:before {
     transform: translateX(0);
+}
+
+/* MOBILE MEDIA QUERY */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .bottom, .top {
+        font-size: .8rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+
+    li {
+        gap: .7rem;
+    }
+
+    .doc {
+        gap: 1.5rem;
+    }
 }
